@@ -4,7 +4,6 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 
-import project.HUD.playerHud;
 import project.entities.Entity;
 import project.entities.creatures.player.internal.Ability;
 import project.entities.creatures.player.internal.Stats;
@@ -23,7 +22,6 @@ public class Player extends Creature {
 	public boolean alive = true;
 
 	// Ability and Hud Code:
-	private playerHud HUD;
 	private Ability q = new Ability("This is a q", Assets.player_down[0]);
 	private Ability w = new Ability("This is a w", Assets.player_down[0]);
 	private Ability e = new Ability("This is an e", Assets.player_down[0]);
@@ -55,7 +53,6 @@ public class Player extends Creature {
 		animLeft = new Animation(500, Assets.player_left);
 		animRight = new Animation(500, Assets.player_right);
 
-		HUD = new playerHud(q, w, e, r, stat);
 
 		stat.health = 200;
 	
@@ -298,8 +295,6 @@ public class Player extends Creature {
 	public void render(Graphics g) {
 		g.drawImage(getCurrentAnimationFrame(), (int) (x - handler.getGameCamera().getxOffset()),
 				(int) (y - handler.getGameCamera().getyOffset()), width, height, null);
-
-		HUD.render(g);
 
 		// g.setColor(Color.red);
 		// g.fillRect((int) (x + bounds.x -

@@ -5,7 +5,7 @@ import java.awt.Font;
 import java.awt.Graphics;
 
 import project.entities.EntityManager;
-import project.entities.creatures.Bullet;
+import project.entities.creatures.Amo;
 import project.entities.creatures.Player;
 import project.entities.creatures.Zombie;
 import project.entities.statics.GreenTower;
@@ -35,7 +35,7 @@ public class World {
 	private Zombie zombie7; 
 	private Zombie zombie8; 
 
-	private Bullet bullet; 
+	private Amo bullet; 
 
 	int xTower1;
 	int yTower1;
@@ -72,7 +72,7 @@ public class World {
      	entityManager.addEntity(zombie8);
 
      	
-		bullet = new Bullet(handler, 100, 100);
+		bullet = new Amo(handler, 100, 100);
      	entityManager.addEntity(bullet);
 
 		entityManager.getPlayer().setX(spawnX);

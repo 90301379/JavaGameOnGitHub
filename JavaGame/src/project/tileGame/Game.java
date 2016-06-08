@@ -4,7 +4,7 @@ import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 
 import project.display.Display;
-import project.entities.creatures.Bullet;
+import project.entities.creatures.Amo;
 import project.gfx.Assets;
 import project.gfx.GameCamera;
 import project.input.KeyManager;
@@ -119,7 +119,7 @@ public class Game implements Runnable {
 			if(timer >= 1000000000){
 				System.out.println("Ticks and Frames: " + ticks);
 				World.Timer();
-				Bullet.Timer();
+				Amo.Timer();
 				ticks = 0;
 				timer = 0;
 			}

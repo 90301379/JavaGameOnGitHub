@@ -10,7 +10,7 @@ import project.gfx.Animation;
 import project.gfx.Assets;
 import project.tileGame.Handler;
 
-public class Bullet extends Creature {
+public class Amo extends Creature {
 	
 	// Animations
 	private Animation animDown, animUp, animLeft, animRight;
@@ -19,7 +19,7 @@ public class Bullet extends Creature {
 
 	private static boolean alive = true;
 
-	public Bullet(Handler handler, float x, float y) {
+	public Amo(Handler handler, float x, float y) {
 		super(handler, x, y, Creature.DEFAULT_CREATURE_WIDTH, Creature.DEFAULT_CREATURE_HEIGHT);
 
 		speed = 10.0f;
